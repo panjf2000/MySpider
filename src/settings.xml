@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	<!-- some used properties -->
+	<setting name="CrawlProperties">
+		<depth>0</depth>
+		<width>0</width>
+		<maxthreads>20</maxthreads>
+		<storepath>E:/mobile/</storepath>
+	</setting>
+	<!-- the info of used database -->
+	<setting name="jdbc">
+		<driver>org.sqlite.JDBC</driver>
+		<dbUrl>
+			jdbc:sqlite:D:/ProgramFiles/SQLite Expert/DBRepo/spiderLinks.db
+		</dbUrl>
+		<username>null</username>
+		<password>null</password>
+	</setting>
+	<!-- to handle the settings of depth and width -->
+	<setting name="prefetchs">
+		<prefetch>null</prefetch>
+	</setting>
+	<!-- to decide which one to use,such as FetchHttp/FetchFTP/FetchHttps.
+		this time,I use HttpClient to connect,can solve Http/Https -->
+	<setting name="fetchs">
+		<fetch>bin.spider.fetch.FetchHttpAndHttps</fetch>
+	</setting>
+	<!-- to pick up the links in particular pages -->
+	<setting name="extractors">
+		<extractor>bin.spider.extractor.PcOnlineExtractor</extractor>
+	</setting>
+	<!-- to write the bytes to local directory -->
+	<setting name="writers">
+		<writer>bin.spider.writer.PcOnlineIndexWriter</writer>
+	</setting>
+	<!-- postprocessor,to update the crawl stuts of uri -->
+	<setting name="postprocessors">
+		<postprocessor>
+			bin.spider.postprocessor.FrontierSchedulerForPconlineMobile
+		</postprocessor>
+	</setting>
+</settings>
