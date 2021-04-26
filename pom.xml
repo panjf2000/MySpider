@@ -55,7 +55,7 @@
 	<dependency>
 		<groupId>commons-io</groupId>
 		<artifactId>commons-io</artifactId>
-		<version>2.4</version>
+		<version>2.7</version>
 	</dependency>
 	<!-- 这是Heritrix中的某些Jar包，主要用于支持UURI -->
 	<dependency>
